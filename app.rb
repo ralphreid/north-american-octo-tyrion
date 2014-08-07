@@ -1,5 +1,5 @@
-require 'pry'
-require 'rspec'
+# require 'pry'
+
 
 Dir[__dir__ + '/lib/*.rb'].each {|file| require file }
 
@@ -22,9 +22,13 @@ rules.push Rule.new(1, 2, nil, nil, 8.50)
 
 co = Checkout.new(rules)
 co.scan(products[1])
+co.scan(products[1])
+co.scan(products[1])
 co.scan(products[2])
-co.total
+
+puts "This is the total cost #{co.total}"
+puts "This is the discounted cost #{co.discounted_total}"
 
 
 
-binding.pry
+# binding.pry
