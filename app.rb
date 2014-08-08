@@ -14,10 +14,41 @@ seed_products.each do |seed_product|
   products.store(seed_product[0], p)
 end
 
-# Build test checkout
+# show menu
+user_input = ""
+
+while user_input != "q"
+  puts "\nWelcome to the Checkout System!\n\nWhat would you like to do?\n\n"
+  puts "1. List current discount rules"
+  puts "2. List products availible"
+  puts "3. Scan a product"
+  puts "4. List items in your basket"
+  puts "5. Checkout"
+  puts "6. Admin - Add a new rule"
+  puts "Press q to quit"
+  user_input = gets.chomp.strip
+  puts ""
+
+  case user_input
+  when "1" then puts "cool"
+  when "2" then puts "cool"
+  when "3" then puts "cool"
+  when "4" then puts "cool"
+  when "5" then puts "cool"
+  when "6" then puts "cool"
+  when "q" then exit
+  end
+end
+
+
+
+
+# Build rules
 rules = []
 rules.push Rule.new(nil, nil, 60, 10, nil)
 rules.push Rule.new(1, 2, nil, nil, 8.50)
+
+
 
 
 co = Checkout.new(rules)
